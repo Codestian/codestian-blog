@@ -11,12 +11,11 @@
         float: right
         height: 100%
         display: flex
-        justify-content: center
+        justify-content: space-between
         align-items: center
 
         @media screen and (max-width: 600px)
             width: 100%
-            justify-content: space-around
 
         a
             text-decoration: none
@@ -31,4 +30,6 @@
             -moz-user-select: none
             -ms-user-select: none
             user-select: none
-            font-family: Ubuntu Mono,monospace
+
+            @media screen and (max-width: 600px)
+                font-size: 3.4vw

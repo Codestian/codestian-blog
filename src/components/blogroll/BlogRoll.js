@@ -13,8 +13,22 @@ class BlogRoll extends React.Component {
       <div className="blogroll-container">
         {posts &&
           posts.map(({ node: post }) => (
-            <div className="blog">
-              <div className="featured-thumbnail">
+            <div className="blog-card-container">
+              <div className="blog-card">
+                <div className="blog-content">
+                  <h2>{post.frontmatter.title}</h2>
+                  <div className="blog-excerpt">
+                    <p>{post.excerpt}</p>
+                  </div>
+                  <Link className="blog-button" to={post.fields.slug}>
+                    Keep reading
+                  </Link>
+                </div>
+                <div className="blog-shadow"></div>
+              </div>{" "}
+            </div>
+
+            /* <div className="featured-thumbnail">
                 <PreviewCompatibleImage
                   imageInfo={{
                     image: post.frontmatter.featuredimage,
@@ -22,8 +36,7 @@ class BlogRoll extends React.Component {
                   }}
                 />
               </div>
-              {post.frontmatter.title}
-            </div>
+              {post.frontmatter.title} */
             // <div className="is-parent column is-6" key={post.id}>
             //   <article
             //     className={`blog-list-item tile is-child box notification ${
