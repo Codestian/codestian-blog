@@ -1,45 +1,20 @@
 import React from "react";
 import { Link } from "gatsby";
-import "./Navbar.sass";
 
 const Navbar = class extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {
-      active: false,
-      navBarActiveClass: "",
-    };
   }
-
-  toggleHamburger = () => {
-    // toggle the active boolean in the state
-    this.setState(
-      {
-        active: !this.state.active,
-      },
-      // after state has been updated,
-      () => {
-        // set the class in state for the navbar accordingly
-        this.state.active
-          ? this.setState({
-              navBarActiveClass: "is-active",
-            })
-          : this.setState({
-              navBarActiveClass: "",
-            });
-      }
-    );
-  };
 
   render() {
     return (
-      <div className="nav-container">
-        <nav>
-        <Link
+      <nav>
+        <div className="container">
+          <Link
             to="/"
             activeStyle={{
               background: "#ffd600",
-              color: '#000'
+              color: "#000",
             }}
           >
             Home
@@ -48,7 +23,7 @@ const Navbar = class extends React.Component {
             to="/work/"
             activeStyle={{
               background: "#ffd600",
-              color: '#000'
+              color: "#000",
             }}
           >
             Work
@@ -57,7 +32,7 @@ const Navbar = class extends React.Component {
             to="/blog/"
             activeStyle={{
               background: "#ffd600",
-              color: '#000'
+              color: "#000",
             }}
           >
             Blog
@@ -66,13 +41,13 @@ const Navbar = class extends React.Component {
             to="/contact/"
             activeStyle={{
               background: "#ffd600",
-              color: '#000'
+              color: "#000",
             }}
           >
             Contact
           </Link>
-        </nav>
-      </div>
+        </div>
+      </nav>
       // <nav
       //   className="navbar"
       //   role="navigation"

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import { Link, graphql } from 'gatsby'
 
 import Layout from '../components/Layout'
-import './index-page.sass'
+import Hero from '../components/Hero'
 
 export const IndexPageTemplate = ({
   image,
@@ -15,9 +15,12 @@ export const IndexPageTemplate = ({
   intro,
 }) => (
   <div>
-    <section className="hero">
+    <Hero height="480">
+      <h1>Title</h1>
+    </Hero>
+    {/* <section className="hero">
       <h1>Hi. I'm Hakim.<br/>A Software Engineer.</h1>
-    </section>
+    </section> */}
   </div>
 )
 
