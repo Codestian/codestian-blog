@@ -25,7 +25,6 @@ export const BlogPostTemplate = ({
       <Hero height="360">
         <div className="blog-post-header">
           <h1 className="blog-title">{title} test</h1>
-          <span className="blog-description">{description}</span>
         </div>
       </Hero>
       <div className="blog-container">
